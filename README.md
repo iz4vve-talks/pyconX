@@ -1,5 +1,5 @@
-# Presentations for Europython2018
-This repository ccontains the preparation of the presentations for Europython 2018 (the proposed persentations: not all will be delivered at the conference).
+# Presentations for PyconX
+This repository contains the preparation of the presentations for PyconX (the proposed presentations: not all will be delivered at the conference).
 
 
 ## How to view the slides
