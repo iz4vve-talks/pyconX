@@ -1,0 +1,62 @@
+#+theme=flow
+Manifold dimensionality reduction techniques
+PyconX - Firenze 
+27 Jul 2018
+Tags: optum, europython, python, 2018
+
+Pietro Mascolo
+Director of Machine Learning - *Flow*Commerce*
+@iz4vve
+
+
+*Slides*and*code*: [[https://bit.ly/2MPPg5j]]
+
+###############################################################
+#* Introduction
+
+#: Let's spend a few minutes to get to know each other.
+
+###############################################################
+#* Contents
+* I'm going to:
+
+#.background imgs/bg_optum_white.png
+
+.html code/html/spacer.html
+.html code/html/math.html
+
+- introduce myself;
+- tell a story;
+- show you some code;
+- show you some numbers.
+
+#: I want to make sure that you're all in the right room :)
+#: An intermediate understanding of statistics and data handling will be VERY useful in following the talk.
+
+###############################################################
+* Me
+
+#.background imgs/bg_optum_white.png
+
+.image imgs/just-me.png 180 _
+- (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪 + 🇮🇳;
+- Physicist ⟶ Data Scientist ⟶ ML/AI ;
+- *Python* / *Go* / *Kotlin* / Scala / ... ;
+- Ham Radio Operator (*IZ4VVE*);
+- Mountain hiker and Karateka;
+- Amateur Photographer;
+- ...
+
+
+###############################################################
+* Flow Commerce
+
+
+###############################################################
+* Q/A
+.image imgs/qa.png 500 _
+
+###############################################################
+#* Thanks for your attention!
+
+#.html code/html/thanks.html

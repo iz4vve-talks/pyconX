@@ -9,7 +9,7 @@ Director of Machine Learning - *Flow*Commerce*
 @iz4vve
 
 
-*Slides*and*code*: [[https://bit.ly/2J6xIzj]]
+*Slides*and*code*: [[https://bit.ly/2MPPg5j]]
 
 ###############################################################
 #* Introduction
@@ -20,7 +20,6 @@ Director of Machine Learning - *Flow*Commerce*
 #* Contents
 * I'm going to:
 
-#.background imgs/bg_optum_white.png
 
 .html code/html/spacer.html
 .html code/html/math.html
@@ -40,7 +39,7 @@ Director of Machine Learning - *Flow*Commerce*
 
 .image imgs/just-me.png 180 _
 - (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪 + 🇮🇳;
-- Physicist ⟶ Data Scientist ;
+- Physicist ⟶ Data Scientist ⟶ ML/AI;
 - *Python* / *Go* / *Kotlin* / Scala / ... ;
 - Ham Radio Operator (*IZ4VVE*);
 - Mountain hiker and Karateka;
@@ -49,10 +48,10 @@ Director of Machine Learning - *Flow*Commerce*
 
 
 ###############################################################
-* Optum / UHG
+* Flow Commerce
 
-.image imgs/optum-mission.png 500 _
-.caption [[http://www.optum.com][optum.com]], [[http://www.unitedhealthgroup.com][unitedhealthgroup.com]]
+#.image imgs/optum-mission.png 500 _
+#.caption [[http://www.optum.com][optum.com]], [[http://www.unitedhealthgroup.com][unitedhealthgroup.com]]
 
 #: Does anybody know of Optum/UHG?
 #: This is actually old: we are now ranked 5th on Fortune 500.
@@ -66,7 +65,7 @@ Director of Machine Learning - *Flow*Commerce*
 
 * 
 
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/dragon.png 500 _
 
 
@@ -86,9 +85,9 @@ Director of Machine Learning - *Flow*Commerce*
 
 
 * The dragon
-.html code/html/spacer.html
+#.html code/html/spacer.html
 
-#.video imgs/crawl.mp4 video/mp4 500 _
+#.video imgs/crawl.mp4 video/mp4 450 _
 .html code/html/video.html
 
 #: That's A LOT of features for a raw dataset...
@@ -97,19 +96,19 @@ Director of Machine Learning - *Flow*Commerce*
 ###############################################################
 * It's just too much...
 
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/bigdatadashboard.jpg 450 _
 
 ###############################################################
 
 * Reality
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/info.jpg 500 _
 
 
 ###############################################################
 * Problems!
-.html code/html/spacer.html
+#.html code/html/spacer.html
 - Understanding the data.
 - Training time.
 - Hardware requirements (sometimes).
@@ -131,7 +130,7 @@ Director of Machine Learning - *Flow*Commerce*
 
 * Sometimes you won't even notice it...
 
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .html code/html/spacer.html
 .image imgs/itcanhappentoyou.png _ 900
 #.caption And it's not always easy to detect...
@@ -143,19 +142,19 @@ Director of Machine Learning - *Flow*Commerce*
 
 * When you get 99.9% accuracy 😃
 
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/happy.jpg _ 600
 
 
 * ... 2.3 seconds later 🤔
-.html code/html/spacer.html
-.image imgs/suspicious.jpg _ 650
+#.html code/html/spacer.html
+.image imgs/suspicious.jpg _ 600
 
 * Let's move on
 
 ###############################################################
 
-* Let's go simpler: this is just a talk after all...
+* This is just a talk after all...
 
 .html code/html/spacer.html
 .html code/html/spacer.html
@@ -171,11 +170,11 @@ We have a dataset and a target.
 
 ###############################################################
 * Be mindful of your metrics!
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/Anscombe.png 400 _
 .caption Anscombe quartet
 
-#: three main classes of lfeature selection algorithms
+#: three main classes of feature selection algorithms
 #: Always be mindful of what you are trying to achieve: some techniques/metrics are more suitable than others.
 #: There is no free lunch... but some lunches can be VERY expensive
 #: Simple statistics can be very helpful in determining the type of dataset and the relationships between variables.
@@ -189,7 +188,7 @@ We have a dataset and a target.
 
 #: Filter Methods considers the relationship between features and the target variable to compute the importance of features.
 
-.html code/html/spacer.html
+#.html code/html/spacer.html
 #: .image imgs/selection.png _ 700
 .image imgs/notgood.jpg _ 600
 
@@ -275,7 +274,7 @@ We have a dataset and a target.
 #.image imgs/Embedded.png _ 700
 #.image imgs/powerful.jpg _ 700
 #.image imgs/fusion.jpg _ 700
-.html code/html/spacer.html
+#.html code/html/spacer.html
 .image imgs/whynotboth.jpg _ 650
 #.caption Embedded methods
 
@@ -306,9 +305,9 @@ We have a dataset and a target.
 
 * 
 
+#.html code/html/spacer.html
 .html code/html/spacer.html
-.html code/html/spacer.html
-.image imgs/dragongif.gif _ 900
+.image imgs/dragongif.gif 450 900
 
 #: Let's implement a (simplistic,) `general` ensemble method that computes feature importances using different techniques.
 #: it's an example. It does not aim at being complete or perfect.
