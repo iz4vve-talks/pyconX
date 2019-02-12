@@ -1,6 +1,6 @@
 #+theme=flow
 Manifold dimensionality reduction techniques
-PyconX - Firenze 
+PyconX - Firenze 🇮🇹
 27 Jul 2018
 Tags: optum, europython, python, 2018
 
@@ -55,6 +55,21 @@ Director of Machine Learning - *Flow*Commerce*
 * Dimensionality reduction - why?
 
 We simply have too much data!
+
+.image imgs/toomuch.jpg _ 600
+
+* What to do?
+
+We might need Blockchain!!
+
+* What to do?
+.html code/html/spacer.html
+
+.image imgs/blockchain.png _ 150
+
+* What to do?
+
+.image imgs/brace.png _ 600
 
 ###############################################################
 * Manifold Learning
