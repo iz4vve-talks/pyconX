@@ -1,7 +1,7 @@
 #+theme=flow
 Manifold dimensionality reduction techniques
 PyconX - Firenze 🇮🇹
-27 Jul 2018
+3 May 2019
 Tags: optum, europython, python, 2018
 
 Pietro Mascolo
@@ -20,7 +20,6 @@ Director of Machine Learning - *Flow*Commerce*
 #* Contents
 * I'm going to:
 
-#.background imgs/bg_optum_white.png
 
 .html code/html/spacer.html
 .html code/html/math.html
@@ -39,17 +38,38 @@ Director of Machine Learning - *Flow*Commerce*
 #.background imgs/bg_optum_white.png
 
 .image imgs/just-me.png 180 _
-- (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪 + 🇮🇳;
-- Physicist ⟶ Data Scientist ⟶ ML/AI ;
+- (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪🏠 + 🇮🇳💍;
+- Physicist ⟶ Data Scientist ⟶ ML/AI;
 - *Python* / *Go* / *Kotlin* / Scala / ... ;
 - Ham Radio Operator (*IZ4VVE*);
-- Mountain hiker and Karateka;
-- Amateur Photographer;
+- ⛰️ + 🥋 + 📷;
 - ...
 
 
 ###############################################################
-* Flow Commerce
+* Who we are
+
+.image imgs/flow-logo.png 100 _
+
+- Funded in 2015;
+- Based in Hoboken 🇺🇸 and Dublin 🇮🇪;
+- ~ 50 people;
+
+
+
+Flow provides a turn-key platform for e-commerce companies to go global.
+#:The platform enables merchants to simply configure their cross-border supply-chain 
+#:requirements and immediately fulfill their overseas demand. 
+#:Flow can be used by e-commerce companies of any size and both as a complete, 
+#:end-to-end solution or as a modular unbundled product. 
+#Using the Flow platform the experience of buying & selling internationally 
+#is as easy as domestic for both merchants and consumers.
+
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/flow.html
+
 
 ###############################################################
 * Dimensionality reduction - why?
@@ -74,26 +94,147 @@ We might need Blockchain!!
 ###############################################################
 * Manifold Learning
 
+`Manifold:`
+_A_topological_space_in_which_every_point_has_a_neighborhood_that_is_homeomorphic_to_the_interior_of_a_sphere_in_Euclidean_space_of_the_same_number_of_dimensions._
+
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/spacer.html
+
+
+KISS:
+*A*space*that*is*locally*Euclidean.*
+
 ###############################################################
-* PCA
+* PCA (not really on a manifold...)
+
+#Maximizes variance
+#Proper to dimension reduction
+#Based on finding eigenvalus/vectors or covariance matrix
+#We can ignore components of less significance (smaller eigenvalues), eigenvectors serve as new base
+#Lose some info (but probably not much)
+
+Principal Components can be obtained by Eigenvector Decomposition (e.g. SVD):
+If $\; \mathbf{\Lambda} = diag ( \lambda_1, \lambda_2, \ldots, \lambda_n ), \; \mathbf{U} = [\vec{u_1}, \vec{u_2}, \ldots\vec{u_n}]$:
+$$ \mathbf{M} = \mathbf{U} \mathbf{\Lambda} \mathbf{U}^\text{T}  \Longleftrightarrow  \; \mathbf{M}\vec{u_i} = \lambda_i \vec{u_i} \Longrightarrow \; \mathbf{M}\vec{u} = \mathbf{\lambda} \vec{u} $$
+
+.image imgs/pca_.png _ 330
+.caption PCA
+
+###############################################################
+#* ICA (not really on a manifold...)
+
+#Non orthogonal
+#Proper to blind source separation or classification using ICA when class id of training data is not available
+#Used to separate signals mixing together
+#independent componenet cannot be estimated from other variables
+
+#Given a signal $\mathbf{x}$, linear combination ($\mathbf{A}$) of indipendent components ($\mathbf{s}$), ICA estimates the independent componenets ($\mathbf{z}$) and combination rule ($\mathbf{W}$)
+#$$ \mathbf{z} = \mathbf{W}\mathbf{x}= \mathbf{W}\mathbf{A}\mathbf{s}$$
+
+#According to CLT, the sum of two independent random variables is more gaussian than the original variables, therefore the distribution of independent components are non-gaussian.
+
+#ICA maximizes non-gaussianity of $\mathbf{z}$, by maximizing its kurtosis.
+
+#.image imgs/pca_vs_ica.jpg _ 450
+#.caption PCA vs ICA
+
+
+###############################################################
+* LDA (not really on a manifold...)
+
+#Maximizes class separation
+#Proper to pattern classification if the number of training samples of each class are large
+
+#Goal:
+#Perform dimensionality reduction “while preserving as much of the class discriminatory information as possible”.
+#Seeks to find directions along which the classes are best separated.
+#Takes into consideration the scatter within-classes but also the scatter between-classes.
+# in practice the inverse of Sw does not always exist, this can be alleviated by applying PCA first
+
+LDA tries to maximize the inter-class scatter ($S_b$) while minimizing the intra-class scatter ($S_w$), given a project ion matrix $\mathbf{y} = \mathbf{U}^T \mathbf{x}$:
+
+$$ \max \frac{| \tilde{\mathbf{S}}_b |}{| \tilde{\mathbf{S}}_w |} = \max \frac{\mathbf{U}^T\mathbf{S}_b\mathbf{U}}{\mathbf{U}^T\mathbf{S}_w\mathbf{U}}$$
+
+.image imgs/lda_.png _ 330
+.caption LDA
+
 
 ###############################################################
 * Isomap
 
+Tries to preserve geodesics
+
+#Quasi-isometric, low-dimensional embedding of a set of high-dimensional data points.
+
+#The algorithm provides a simple method for estimating the intrinsic geometry of a data manifold based on a 
+#rough estimate of each data point’s neighbors on the manifold. 
+#Isomap is highly efficient and generally applicable to a broad range of data sources and dimensionalities. 
+
+# construct neighbourhood graph 
+# for each pair of points compute shortest distance --> geodesic distance
+# perform Multi-Dimensional Scaling based on geodesics instead of Euclidean distance
+
+.image imgs/isomap.jpg _ 380
+.caption Geodesics and Isomap
+
 ###############################################################
-* Local Linear Embedding
+* K-PCA
+
+Similarly to PCA, it computes the covariance matrix after having transformed it into a higher-dimensional space: $C = \frac{1}{m} \sum_i \Phi (x_i) \Phi (x_i)^T, \;\; \Phi \, : \, \mathbf{R}^d \longrightarrow \mathbf{R}^N$.
+$\Phi$ has to be chosen so that it has a known corresponding kernel, so that the kernel trick can be used.
+
+
+# it is not trivial to find a good kernel
+# VC (Vapnik-Chervonenkis) theory tells us that often mappings which take us into a higher dimensional space than the dimension of the input space provide us with greater classification power.
+# Kernel trick: for algorithms that can be expressed solelt in terms of dot products:
+# it allows to construct the dot product space matrix in a simple way
+
+###############################################################
+# * Locally Linear Embedding
+
+# Tries to preserve distances within local neighbourhoods
+## can be thought of as a series of local PCA that are combined to find the best non-linear embedding
 
 ###############################################################
 * Stochastic techniques
 
 ###############################################################
-* T-SNE
+* T-SNE 1/2
+
+#It's stochastic: probabilities play a big part in it.
+#It models each high-dimensional object by a two- or three-dimensional point in such a way that similar objects are modeled by nearby points and dissimilar objects are modeled by distant points with high probability. 
+
+#- construct a probability distribution over each pair of points so that similar objects are likely to be "close"
+#- construct a similar probability distribution in a lower-dimensional space
+#- minimize the Kullbach-Leibler divergence between the two distributions.
+
+
+$$ p_{j|i} = \frac{ \exp \left(- \frac {\left\lVert \mathbf{x}_i - \mathbf{x}_j \right\rVert ^2}{2 \sigma_i^2} \right) }{\sum_{k \neq i} \exp \left(  \frac{- \left\lVert \mathbf{x}_i - \mathbf{x}_k \right\rVert ^2}  {2\sigma_i^2} \right)}$$
+
+$$ q_{j|i} = \frac{ \left( 1 + \left\lVert \mathbf{y}_i - \mathbf{y}_j \right\rVert ^2 \right) ^{-1} }{\sum_{k \neq l} \left(   1 + \left\lVert \mathbf{y}_k - \mathbf{y}_l \right\rVert ^2 \right) ^{-1}}$$
+
+
+$$ KL (P||Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$
+
+
+
+# As Van der Maaten and Hinton explained: "The similarity of datapoint x j {\displaystyle x_{j}} x_{j} to datapoint x i {\displaystyle x_{i}} x_{i} is the conditional probability, p j | i {\displaystyle p_{j|i}} {\displaystyle p_{j|i}}, that x i {\displaystyle x_{i}} x_{i} would pick x j {\displaystyle x_{j}} x_{j} as its neighbor if neighbors were picked in proportion to their probability density under a Gaussian centered at x i {\displaystyle x_{i}} x_{i}."[1]
+
+# $$p i j = p j ∣ i + p i ∣ j 2 N {\displaystyle p_{ij}={\frac {p_{j\mid i}+p_{i\mid j}}{2N}}} {\displaystyle p_{ij}={\frac {p_{j\mid i}+p_{i\mid j}}{2N}}}$$
+
+###############################################################
+* T-SNE 2/2
 
 ###############################################################
 * UMAP
 
 ###############################################################
 * Real world applications
+
+# labelling products in e-commerce based on visualization (T-SNE or UMAP)
 
 
 ###############################################################

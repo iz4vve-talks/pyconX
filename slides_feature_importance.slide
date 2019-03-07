@@ -1,7 +1,7 @@
 #+theme=flow
 Good features beat algorithms
 PyconX - Firenze 🇮🇹
-27 May 2019
+3 May 2019
 Tags: optum, europython, python, 2019
 
 Pietro Mascolo
@@ -38,19 +38,40 @@ Director of Machine Learning - *Flow*Commerce*
 #.background imgs/bg_optum_white.png
 
 .image imgs/just-me.png 180 _
-- (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪 + 🇮🇳;
+- (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪🏠 + 🇮🇳💍;
 - Physicist ⟶ Data Scientist ⟶ ML/AI;
 - *Python* / *Go* / *Kotlin* / Scala / ... ;
 - Ham Radio Operator (*IZ4VVE*);
-- Mountain hiker and Karateka;
-- Amateur Photographer;
+- Mountain hiker⛰️ and Karateka🥋;
+- Amateur Photographer📷;
 - ...
 
 
 ###############################################################
-* Flow Commerce
+* Who we are
 
-#.image imgs/optum-mission.png 500 _
+.image imgs/flow-logo.png 100 _
+
+- Funded in 2015;
+- Based in Hoboken 🇺🇸 and Dublin 🇮🇪;
+- ~ 50 people;
+
+
+
+Flow provides a turn-key platform for e-commerce companies to go global.
+#:The platform enables merchants to simply configure their cross-border supply-chain 
+#:requirements and immediately fulfill their overseas demand. 
+#:Flow can be used by e-commerce companies of any size and both as a complete, 
+#:end-to-end solution or as a modular unbundled product. 
+#Using the Flow platform the experience of buying & selling internationally 
+#is as easy as domestic for both merchants and consumers.
+
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/spacer.html
+.html code/html/flow.html
+
+
 #.caption [[http://www.optum.com][optum.com]], [[http://www.unitedhealthgroup.com][unitedhealthgroup.com]]
 
 #: Does anybody know of Optum/UHG?
