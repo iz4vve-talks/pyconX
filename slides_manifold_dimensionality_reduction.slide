@@ -231,10 +231,27 @@ $$ KL (P||Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}$$
 ###############################################################
 * UMAP
 
+In some ways similar to TSNE, under different assumptions.
+The low-dimensional manifold for the new representation is explicitly chosend as $R^N$, and the metric used in it is Euclidean distance.
+
+It tries to minimize:
+
+$$ D = \sum_{a} \mu(a) \log \frac{\mu(a)}{\nu(a)} + (1-\mu(a)) \log \frac{1-\mu(a)}{1-\nu(a)}$$
+
+One attractive and one repulsive term (clumps and gaps).
+Training can include a label for extra information on separation.
+
 ###############################################################
 * Real world applications
 
-# labelling products in e-commerce based on visualization (T-SNE or UMAP)
+###############################################################
+
+* Labelling items
+# in e-commerce based on visualization 
+
+We have a bunch of data regarding products (mainly unstructured text and pictures).
+#We don't have labels!
+#(T-SNE or UMAP)
 
 
 ###############################################################

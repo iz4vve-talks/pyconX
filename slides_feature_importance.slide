@@ -1,8 +1,9 @@
 #+theme=flow
 Good features beat algorithms
-PyconX - Firenze 🇮🇹
-3 May 2019
-Tags: optum, europython, python, 2019
+Pycon X - Firenze 🇮🇹
+23 Mar 2019
+
+Tags: flow, machinelearning, datascience, python, 2019
 
 Pietro Mascolo
 Director of Machine Learning - *Flow*Commerce*
@@ -15,7 +16,8 @@ Director of Machine Learning - *Flow*Commerce*
 #* Introduction
 
 #: Let's spend a few minutes to get to know each other.
-
+#PyconX - Firenze 🇮🇹
+#3 May 2019
 ###############################################################
 #* Contents
 * I'm going to:
@@ -41,9 +43,10 @@ Director of Machine Learning - *Flow*Commerce*
 - (🇧🇷 $\ast$ 🇮🇹) + 🇮🇪🏠 + 🇮🇳💍;
 - Physicist ⟶ Data Scientist ⟶ ML/AI;
 - *Python* / *Go* / *Kotlin* / Scala / ... ;
-- Ham Radio Operator (*IZ4VVE*);
-- Mountain hiker⛰️ and Karateka🥋;
-- Amateur Photographer📷;
+- ⛰️ + 🥋 + 📷
+#- Ham Radio Operator (*IZ4VVE*);
+#- Mountain hiker⛰️ and Karateka🥋;
+#- Amateur Photographer📷;
 - ...
 
 
@@ -70,6 +73,12 @@ Flow provides a turn-key platform for e-commerce companies to go global.
 .html code/html/spacer.html
 .html code/html/spacer.html
 .html code/html/flow.html
+
+
+###############################################################
+* Who we are
+
+.image imgs/flow.png _ 900
 
 
 #.caption [[http://www.optum.com][optum.com]], [[http://www.unitedhealthgroup.com][unitedhealthgroup.com]]
@@ -190,10 +199,10 @@ We have a dataset and a target.
 * Which features do we choose? And how do we choose them?
 
 ###############################################################
-* Be mindful of your metrics!
+#* Be mindful of your metrics!
 #.html code/html/spacer.html
-.image imgs/Anscombe.png 400 _
-.caption Anscombe quartet
+#.image imgs/Anscombe.png 400 _
+#.caption Anscombe quartet
 
 #: three main classes of feature selection algorithms
 #: Always be mindful of what you are trying to achieve: some techniques/metrics are more suitable than others.
@@ -203,6 +212,12 @@ We have a dataset and a target.
 #: In this case we would be fooled into thinking the datasets are VERY similar when in fact they are quite different.
 #: Correlation, in particular, fails spectacularly here because of its inherent inability to capture non-linear relationships.
 #: We should definitely use summary statistics, but we should also maintain a healthy dose of skepticism.
+
+###############################################################
+* Be mindful of your metrics!
+.html code/html/spacer.html
+.image imgs/anscombe1.gif 400 _
+
 
 ###############################################################
 * Filter methods
@@ -485,10 +500,10 @@ Let's run the selector to see what features are important:
 #.html code/html/spacer.html
 
 
-#  Things should be as simple as possible, but not simpler...
+  Things should be as simple as possible, but not simpler...
 
 
-#                                                                                    A. Einstein
+                                                                                    A. Einstein
 
 
 ###############################################################
