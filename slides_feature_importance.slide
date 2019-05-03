@@ -1,7 +1,7 @@
 #+theme=flow
 Good features beat algorithms
 Pycon X - Firenze 🇮🇹
-23 Mar 2019
+3 May 2019
 
 Tags: flow, machinelearning, datascience, python, 2019
 
@@ -76,9 +76,13 @@ Flow provides a turn-key platform for e-commerce companies to go global.
 
 
 ###############################################################
-* Who we are
+* What we do
 
-.image imgs/flow.png _ 900
+Global e-commerce is *HUGE*:
+
+23% YoY growth, 29% of total B2C commerce
+
+.image imgs/flow.png _ 850
 
 
 #.caption [[http://www.optum.com][optum.com]], [[http://www.unitedhealthgroup.com][unitedhealthgroup.com]]
